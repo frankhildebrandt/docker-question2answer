@@ -13,7 +13,7 @@ RUN git clone https://github.com/q2a/question2answer.git \
  && git clone https://github.com/dunse/qa-category-email-notifications.git /question2answer/qa-plugin/qa-email-notification \
  && git clone https://github.com/nakov/q2a-plugin-open-questions.git /question2answer/qa-plugin/qa-questions-open
 
-ADD qa-config.php /question2answer
+COPY qa-config.php /question2answer/qa-config.php
 
 RUN rm -fR /var/www/html \
  && ln -s /question2answer /var/www/html \
